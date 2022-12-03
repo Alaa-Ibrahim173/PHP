@@ -1,6 +1,9 @@
 <?php
+//Show your phpinfo on browser.
+echo phpinfo();
+echo "<br>";
 //Use constant to display your website name which mustn’t change across your pages.
-define("lab", "lab1,hola");
+define("lab", "lab1.com");
 echo '<span style="color: red; font-size: 35px;"> ' .lab;
 echo "<br>";
 //Show your server :name, address, port,filename and path of the currently executing script.
@@ -21,7 +24,7 @@ echo "<br>";
     age equal 5 --> Print Msg --> Go to Kindergarden,
     age between 6 & 12 --> Print Msg --> Go to grade :XXX
     (Use switch case).*/
-    $age_of_your_brother=5;
+    $age_of_your_brother=;
     switch ($age_of_your_brother) {
       case $age_of_your_brother<5:
         echo "Stay at home";
