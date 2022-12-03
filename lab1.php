@@ -1,5 +1,4 @@
 <?php
-
 //Use constant to display your website name which mustn’t change across your pages.
 define("lab", "lab1,hola");
 echo '<span style="color: red; font-size: 35px;"> ' .lab;
@@ -34,9 +33,4 @@ echo "<br>";
         echo "Go to grade :XXX";
         break;
       }
-
-//Show your phpinfo on browser.
-echo phpinfo();
-echo "<br>";
-
 ?>
