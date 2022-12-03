@@ -24,7 +24,7 @@ echo "<br>";
     age equal 5 --> Print Msg --> Go to Kindergarden,
     age between 6 & 12 --> Print Msg --> Go to grade :XXX
     (Use switch case).*/
-    $age_of_your_brother=;
+    $age_of_your_brother=10;
     switch ($age_of_your_brother) {
       case $age_of_your_brother<5:
         echo "Stay at home";
