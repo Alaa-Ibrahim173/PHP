@@ -20,7 +20,7 @@ function build_table($identifier){
         
         $file .= '<tr>';
 foreach($value as $key2=>$value2){
-            if($value2=="Science"or $value2=='Alaa'or $value2=='ahmed@test.com'or $value2=='Waleid' or $value2=='farouk@test.com')
+            if($value2=="Science")
             {
             $file .= '<td style="color:red;">' . htmlspecialchars($value2) . '</td>';
            
