@@ -3,8 +3,8 @@
         
     </head>
     <body>
-    <h2>Application name : PHP class registration</h2>
 <?php
+echo'<h2>Application name : PHP class registration</h2>';
 function build_table($identifier){
     // start table
     $file = '<table>';
