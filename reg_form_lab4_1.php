@@ -19,8 +19,8 @@ require_once "configure.php";
 
 $name=$email=$gender='';
  mysqli_select_db( $conn,'users_details');
- 
- $name=$_POST['name'];
+ if(!empty($_POST))
+ {$name=$_POST['name'];
  $email=$_POST['email'];
  $gender=$_POST['gender'];
  if(isset($_POST['mail_status'])) 
@@ -35,7 +35,7 @@ $name=$email=$gender='';
    if(! $result ) {
       die('Could not insert to table: ' . mysqli_error($conn));
    }
-}   
+} }  
    //echo "<br>Data inserted to table successfully\n";
    
  //echo 'Connected successfully';
