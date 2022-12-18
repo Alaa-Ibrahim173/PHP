@@ -38,13 +38,6 @@
     cursor: pointer;border: none;border-radius: 3px;margin:3px 5px 5px 5px;border:1px solid silver">
 </form>
 <?php
-
-    /*echo "<br/>Test :  <br/>";
-    echo $name;
-    echo "<br/>";
-    echo $email;
-    echo "<br/>";
-    echo $gender;*/
     
 ?>
     

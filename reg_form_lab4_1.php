@@ -7,23 +7,19 @@
 }
 
 body{
-   width: 500px;
+   width: 600px;
 }
       </style>
 </head>
 <body>
 <form action="" method="POST" >
 <?php
-$dbname = 'users_details';
-$conn=mysqli_connect('localhost','root','',$dbname);
-if(! $conn ) {
-    die('Could not connect: ' . mysqli_error($conn));
- }
- 
+require_once "configure.php";
  //echo 'Connected successfully';
 
-
- mysqli_select_db( $conn,$dbname );
+$name=$email=$gender='';
+ mysqli_select_db( $conn,'users_details');
+ 
  $name=$_POST['name'];
  $email=$_POST['email'];
  $gender=$_POST['gender'];
@@ -31,23 +27,17 @@ if(! $conn ) {
  {$mail_status="yes";}
  else{
   $mail_status="no"; }
- 
+ if(!empty(($name&&$email&&$gender&&$mail_status))){
  $sql="insert into user(name,email,gender,mail_status)values('$name','$email','$gender','$mail_status')"; 
 
- $retval = mysqli_query( $conn,$sql );
+ $result = mysqli_query( $conn,$sql );
    
-   if(! $retval ) {
+   if(! $result ) {
       die('Could not insert to table: ' . mysqli_error($conn));
    }
-    
+}   
    //echo "<br>Data inserted to table successfully\n";
-   mysqli_close($conn);
-   $dbname = 'users_details';
-$conn=mysqli_connect('localhost','root','',$dbname);
-if(! $conn ) {
-    die('Could not connect: ' . mysqli_error($conn));
- }
- 
+   
  //echo 'Connected successfully';
  $sql="select * from user";
  //
@@ -60,7 +50,7 @@ if(! $conn ) {
 
 <h2>User Details.<a href="reg_form_lab4.php"><input type="button" name="add new user"value="add new user"style="margin-left: 200px;background-color:green;color:white;border-radius:3px;height:25px;"></a></h2><hr>
 
- <table style="border:1px solid Gainsboro;font-size:15px;width:500px;">
+ <table style="border:1px solid Gainsboro;font-size:15px;width:600px;">
  <thead>
      <tr>
                      <th>#</th>
