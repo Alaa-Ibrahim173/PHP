@@ -83,7 +83,7 @@ while ($row=mysqli_fetch_assoc($result)) {
     <td><?=$row['email']?></td>
     <td><?=$row['gender']?></td>
     <td><?=$row['mail_status']?></td>
-    <td><a href="view.php?id=<?=$row['id']?>"><image src="illust58-2509.jpg" href="#view"></a>
+    <td><a href="view.php?id=<?=$row['id']?>"><image src="view.jpg" href="#view"></a>
     |<a href="edit.php?id=<?=$row['id']?>"><img src="edi.jfif" href="#edit"></a>
     |<a href="delete.php?id=<?=$row['id']?>"><img src="delete.png" href="#delete"></a></td>
 </tr>
